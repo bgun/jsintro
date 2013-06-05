@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Untitled</title>
+<style>
+  #results {
+    border-top: 1px solid #AAA;
+    margin: 0;
+    padding: 0;
+  }
+  #results li {
+    margin-bottom: 2px;
+    padding: 5px;
+  }
+  #results li.pass {
+    background-color: #DFD;
+    border: 1px solid #0C0;
+    color: #0C0;
+  }
+  #results li.fail {
+    background-color: #FDD;
+    border: 1px solid #F00;
+    color: #F00;
+  }
+</style>
+<script src="util.js"></script>
+<script>
+
+function run_tests() {
+  if(document.getElementById('results')) {
+    console.log("Running tests!");
+    assert(typeof(map) === 'function', "map exists and it's a function");
+    assert(typeof(walk_the_dom) === 'function', "walk_the_dom exists and it's a function");
+    assert(false, "This test should fail.");
+  } else {
+    console.log("No results container. Tests will not run.");
+  }
+}
+
+function ready() {
+  run_tests();
+  document.getElementById('click_me').addEventListener('click',function(e) {
+    console.log(e);
+  });
+}
+
+document.addEventListener('DOMContentLoaded',ready);
+
+</script>
+</head>
+<body>
+
+<span id="click_me">Click me!</span>
+
+<ul id="results">
+  <h3>Tests</h3>
+</ul>
+
+</body>
+</html>

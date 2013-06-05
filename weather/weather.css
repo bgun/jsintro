@@ -1,0 +1,101 @@
+html,body {
+  font-family: sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+#header {
+  background: #39F;
+  height: 3em;
+  position: fixed;
+    top: 0;
+    left: 0;
+  width: 100%;
+  z-index: 3;
+}
+#header h1 {
+  font-size: 2em;
+  color: #FFF;
+  line-height: 3rem;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.page {
+  display: none;
+  height: 100%;
+  padding: 3rem 1rem;
+  position: fixed;
+    top: 0;
+    left: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 2;
+}
+.page.current {
+  display: block;
+}
+#page-weather.page {
+  padding-top: 7rem;
+}
+
+#search-form {
+}
+#search-form input {
+  border: 1px solid #CCC;
+  border-radius: 0.5rem;
+  display: block;
+  font-size: 2rem;
+  height: 3rem;
+  margin: 1rem auto;
+  text-align: center;
+  width: 80%;
+}
+#search-form button {
+  background: #39F;
+  border-radius: 0.5rem;
+  border: 0;
+  color: #FFF;
+  display: block;
+  font-size: 2em;
+  height: 3rem;
+  margin: 0 auto;
+  text-align: center;
+  width: 60%;
+}
+
+#footer {
+  background: #000;
+  height: 3rem;
+  position: fixed;
+    bottom: 0;
+    left: 0;
+  width: 100%;
+  z-index: 3;
+}
+#footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#footer ul li {
+  box-sizing: border-box;
+  color: #FFF;
+  cursor: pointer;
+  float: left;
+  line-height: 3em;
+  text-align: center;
+  width: 50%;
+}
+#footer ul li:first-child {
+  border-right: 1px solid #666;
+}
+#footer ul li:last-child {
+  border-left: 1px solid #AAA;
+}
+#footer ul li:hover {
+  background: #555;
+}
